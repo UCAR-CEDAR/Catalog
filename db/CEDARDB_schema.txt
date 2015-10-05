@@ -1,0 +1,268 @@
+ +-------------------------------+
+ | Tables_in_CEDARCATALOG        |
+ +-------------------------------+
+ | tbl_cedar_file                | 
+ | tbl_class_type                | 
+ | tbl_date                      | 
+ | tbl_date_in_file              | 
+ | tbl_file_info                 | 
+ | tbl_instrument                | 
+ | tbl_notes                     | 
+ | tbl_observatory               | 
+ | tbl_organization              | 
+ | tbl_parameter_code            | 
+ | tbl_person                    | 
+ | tbl_person_role               | 
+ | tbl_plotting_params           | 
+ | tbl_record_in_file_first_last | 
+ | tbl_record_info               | 
+ | tbl_record_type               | 
+ | tbl_report                    | 
+ | tbl_role                      | 
+ | tbl_site                      | 
+ | tbl_version                   | 
+ +-------------------------------+
+ 
+ tbl_cedar_file
+ +-----------+--------------+------+-----+---------+----------------+
+ | Field     | Type         | Null | Key | Default | Extra          |
+ +-----------+--------------+------+-----+---------+----------------+
+ | FILE_ID   | int(10)      | NO   | UNI |         | auto_increment |
+ | FILE_NAME | varchar(255) | NO   | PRI |         |                |
+ | FILE_SIZE | int(10)      | NO   |     |         |                |
+ | FILE_MARK | varchar(50)  | NO   |     |         |                |
+ | NRECORDS  | int(10)      | NO   |     |         |                |
+ +-----------+--------------+------+-----+---------+----------------+
+ 
+ tbl_class_type
+ +---------+--------------+------+-----+---------+----------------+
+ | Field   | Type         | Null | Key | Default | Extra          |
+ +---------+--------------+------+-----+---------+----------------+
+ | ID      | int(10)      | NO   | PRI |         | auto_increment |
+ | NAME    | varchar(255) | NO   |     |         |                |
+ | PARENT  | int(10)      | NO   |     | 0       |                |
+ | NOTE_ID | int(10)      | NO   |     | 0       |                |
+ +---------+--------------+------+-----+---------+----------------+
+ 
+ tbl_date
+ +---------+---------+------+-----+---------+----------------+
+ | Field   | Type    | Null | Key | Default | Extra          |
+ +---------+---------+------+-----+---------+----------------+
+ | DATE_ID | int(10) |      | UNI | 0       | auto_increment |
+ | YEAR    | int(5)  |      | PRI | 0       |                |
+ | MONTH   | int(5)  |      | PRI | 0       |                |
+ | DAY     | int(5)  |      | PRI | 0       |                |
+ +---------+---------+------+-----+---------+----------------+
+ 
+ tbl_date_in_file
+ +-------------------+---------+------+-----+---------+-------+
+ | Field             | Type    | Null | Key | Default | Extra |
+ +-------------------+---------+------+-----+---------+-------+
+ | DATE_ID           | int(10) |      | PRI | 0       |       |
+ | RECORD_IN_FILE_ID | int(10) |      | PRI | 0       |       |
+ +-------------------+---------+------+-----+---------+-------+
+ 
+ tbl_file_info
+ +-------------------+---------+------+-----+---------+----------------+
+ | Field             | Type    | Null | Key | Default | Extra          |
+ +-------------------+---------+------+-----+---------+----------------+
+ | RECORD_IN_FILE_ID | int(10) |      | UNI | 0       | auto_increment |
+ | FILE_ID           | int(10) |      | PRI | 0       |                |
+ | RECORD_TYPE_ID    | int(10) |      | PRI | 0       |                |
+ +-------------------+---------+------+-----+---------+----------------+
+ 
+ tbl_instrument
+ +-----------------+--------------+------+-----+-----------+-------+
+ | Field           | Type         | Null | Key | Default   | Extra |
+ +-----------------+--------------+------+-----+-----------+-------+
+ | KINST           | int(10)      | NO   | PRI | 0         |       |
+ | INST_NAME       | varchar(40)  | NO   |     | UNDEFINED |       |
+ | PREFIX          | varchar(3)   | NO   |     | UND       |       |
+ | DESCRIPTION     | text         | YES  |     | NULL      |       |
+ | HAS_CLASS_TYPE  | tinyint(1)   | NO   |     | 0         |       |
+ | CLASS_TYPE_ID   | int(10)      | YES  |     | NULL      |       |
+ | HAS_OBSERVATORY | tinyint(1)   | NO   |     | 0         |       |
+ | OBSERVATORY     | int(10)      | YES  |     | NULL      |       |
+ | HAS_OP_MODE     | tinyint(1)   | NO   |     | 0         |       |
+ | OP_MODE         | varchar(200) | YES  |     | NULL      |       |
+ | NOTE_ID         | int(10)      | NO   |     | 0         |       |
+ +-----------------+--------------+------+-----+-----------+-------+
+ 
+ tbl_notes
+ +-------------+------------+------+-----+---------+----------------+
+ | Field       | Type       | Null | Key | Default | Extra          |
+ +-------------+------------+------+-----+---------+----------------+
+ | ID          | int(10)    | NO   | PRI |         | auto_increment |
+ | NOTE_USER   | int(5)     | NO   |     |         |                |
+ | DESCRIPTION | text       | NO   |     |         |                |
+ | NOTE_DATE   | date       | NO   |     |         |                |
+ | NEXT_NOTE   | int(10)    | NO   |     |         |                |
+ | PUBLIC      | tinyint(1) | NO   |     | 0       |                |
+ +-------------+------------+------+-----+---------+----------------+
+ 
+ tbl_observatory
+ +-------------------+--------------+------+-----+---------------+----------------+
+ | Field             | Type         | Null | Key | Default       | Extra          |
+ +-------------------+--------------+------+-----+---------------+----------------+
+ | ID                | int(10)      | NO   | PRI |               | auto_increment |
+ | ALPHA_CODE        | varchar(50)  | NO   |     | UNDEFINED     |                |
+ | LONG_NAME         | varchar(40)  | NO   |     | UNDEFINED     |                |
+ | DUTY_CYCLE        | varchar(40)  | NO   |     | UNDEFINED     |                |
+ | OPERATIONAL_HOURS | varchar(40)  | NO   |     | UNDEFINED     |                |
+ | REF_URL           | varchar(120) | NO   |     | UNDEFINED     |                |
+ | NOTE_ID           | int(10)      | NO   |     | 0             |                |
+ +-------------------+--------------+------+-----+---------------+----------------+
+ 
+ tbl_parameter_code
+ +---------------+-------------+------+-----+-----------+-------+
+ | Field         | Type        | Null | Key | Default   | Extra |
+ +---------------+-------------+------+-----+-----------+-------+
+ | PARAMETER_ID  | int(10)     | NO   | PRI |           |       |
+ | LONG_NAME     | varchar(50) | NO   |     | UNDEFINED |       |
+ | SHORT_NAME    | varchar(50) | NO   |     | UNDEFINED |       |
+ | MADRIGAL_NAME | varchar(50) | NO   |     | UNDEFINED |       |
+ | UNITS         | varchar(50) | NO   |     | UNDEFINED |       |
+ | SCALE         | varchar(50) | NO   |     | UNDEFINED |       |
+ | NOTE_ID       | int(10)     | NO   |     | 0         |       |
+ +---------------+-------------+------+-----+-----------+-------+
+ 
+ tbl_plotting_params
+ +---------------+--------------+------+-----+-------------+-------+
+ | Field         | Type         | Null | Key | Default     | Extra |
+ +---------------+--------------+------+-----+-------------+-------+
+ | KINST         | int(11)      | NO   | PRI | 0           |       |
+ | KINDAT        | int(11)      | NO   | PRI | 0           |       |
+ | PARAMTER_ID   | int(11)      | NO   | PRI | 0           |       |
+ | REQUIRES      | varchar(255) | NO   |     |             |       |
+ | PLOT_FUNC     | varchar(255) | NO   |     |             |       |
+ | IND_FUNC      | varchar(255) | NO   |     | time_m21m34 |       |
+ | DEFAULT_LABEL | varchar(255) | NO   |     |             |       |
+ | DEFAULT_MIN   | float        | NO   |     | 0           |       |
+ | DEFAULT_MAX   | float        | NO   |     | 0           |       |
+ +---------------+--------------+------+-----+-------------+-------+
+ 
+ tbl_record_in_file_first_last
+ +-------------------+---------+------+-----+---------+-------+
+ | Field             | Type    | Null | Key | Default | Extra |
+ +-------------------+---------+------+-----+---------+-------+
+ | RECORD_IN_FILE_ID | int(10) |      | PRI |         |       |
+ | FIRST_YEAR        | int(5)  |      |     |         |       |
+ | FIRST_MONTH       | int(5)  |      |     |         |       |
+ | FIRST_DAY         | int(5)  |      |     |         |       |
+ | FIRST_HOUR        | int(5)  |      |     |         |       |
+ | FIRST_MINUTE      | int(5)  |      |     |         |       |
+ | FIRST_MILISECOND  | int(5)  |      |     |         |       |
+ | LAST_YEAR         | int(5)  |      |     |         |       |
+ | LAST_MONTH        | int(5)  |      |     |         |       |
+ | LAST_DAY          | int(5)  |      |     |         |       |
+ | LAST_HOUR         | int(5)  |      |     |         |       |
+ | LAST_MINUTE       | int(5)  |      |     |         |       |
+ | LAST_MILISECOND   | int(5)  |      |     |         |       |
+ +-------------------+---------+------+-----+---------+-------+
+ 
+ tbl_record_info
+ +----------------+---------+------+-----+---------+-------+
+ | Field          | Type    | Null | Key | Default | Extra |
+ +----------------+---------+------+-----+---------+-------+
+ | RECORD_TYPE_ID | int(10) |      | PRI |         |       |
+ | PARAMETER_ID   | int(10) |      | PRI |         |       |
+ +----------------+---------+------+-----+---------+-------+
+ 
+ tbl_record_type
+ +----------------+-------------+------+-----+-----------+----------------+
+ | Field          | Type        | Null | Key | Default   | Extra          |
+ +----------------+-------------+------+-----+-----------+----------------+
+ | RECORD_TYPE_ID | int(10)     | NO   | UNI |           | auto_increment |
+ | KINDAT         | int(10)     | NO   | PRI |           |                |
+ | KINST          | int(10)     | NO   | PRI |           |                |
+ | DESCRIPTION    | varchar(60) | NO   |     | UNDEFINED |                |
+ +----------------+-------------+------+-----+-----------+----------------+
+ 
+ tbl_report
+ +-----------------+--------------+------+-----+-------------------+----------------+
+ | Field           | Type         | Null | Key | Default           | Extra          |
+ +-----------------+--------------+------+-----+-------------------+----------------+
+ | REPORT_ID       | int(10)      | NO   | PRI |                   | auto_increment |
+ | REQUEST_TIME    | timestamp    | NO   |     | current_timestamp |                |
+ | USER            | varchar(64)  | NO   |     | 0                 |                |
+ | REQUESTED       | varchar(255) | NO   |     | 0                 |                |
+ | CONSTRAINT_EXPR | varchar(255) | NO   |     | 0                 |                |
+ | DATA_PRODUCT    | varchar(64)  | NO   |     | 0                 |                |
+ +-----------------+--------------+------+-----+-------------------+----------------+
+ 
+ tbl_site
+ +--------------+------------------+------+-----+-----------+----------------+
+ | Field        | Type             | Null | Key | Default   | Extra          |
+ +--------------+------------------+------+-----+-----------+----------------+
+ | ID           | int(30)          | NO   | PRI |           | auto_increment |
+ | DESCRIPTION  | text             | NO   |     |           |                |
+ | KINST        | int(10)          | NO   |     |           |                |
+ | SHORT_NAME   | varchar(10)      | NO   |     | UND       |                |
+ | LONG_NAME    | varchar(40)      | NO   |     | UNDEFINED |                |
+ | DESCRIPTION  | text             | NO   |     |           |                |
+ | LAT_DEGREES  | int(30)          | NO   |     | 0         |                |
+ | LAT_MINUTES  | int(30) unsigned | NO   |     | 0         |                |
+ | LAT_SECONDS  | int(30) unsigned | NO   |     | 0         |                |
+ | LONG_DEGREES | int(30)          | NO   |     | 0         |                |
+ | LONG_MINUTES | int(30) unsigned | NO   |     | 0         |                |
+ | LONG_SECONDS | int(30) unsigned | NO   |     | 0         |                |
+ | ALTITUDE     | float(10,8)      | NO   |     | 0.0000000 |                |
+ | NOTE_ID      | int(10)          | NO   |     | 0         |                |
+ +--------------+------------------+------+-----+-----------+----------------+
+ 
+ tbl_version
+ +---------------+----------+------+-----+-------------------+-------+
+ | Field         | Type     | Null | Key | Default           | Extra |
+ +---------------+----------+------+-----+-------------------+-------+
+ | VERSION       | char(10) | NO   |     |                   |       |
+ | CREATED       | date     | NO   |     | 0000-00-00        |       |
+ | LAST_MODIFIED | char(40) | NO   |     | CURRENT_TIMESTAMP |       |
+ +---------------+----------+------+-----+-------------------+-------+
+ 
+ tbl_organization
+ +---------------------+--------------+------+-----+---------+----------------+
+ | Field               | Type         | Null | Key | Default | Extra          |
+ +---------------------+--------------+------+-----+---------+----------------+
+ | organization_id     | int(32)      | NO   | PRI | NULL    | auto_increment | 
+ | parent_id           | int(32)      | YES  |     | NULL    |                | 
+ | organization_name   | varchar(256) | NO   |     | NULL    |                | 
+ | organization_acronym| varchar(32)  | NO   |     | NULL    |                | 
+ | organization_url    | varchar(256) | YES  |     | NULL    |                | 
+ | organization_logo   | varchar(256) | YES  |     | NULL    |                | 
+ +---------------------+--------------+------+-----+---------+----------------+
+ 
+ tbl_person
+ +----------------+--------------+------+-----+---------+----------------+
+ | Field          | Type         | Null | Key | Default | Extra          |
+ +----------------+--------------+------+-----+---------+----------------+
+ | person_id      | int(32)      | NO   | PRI | NULL    | auto_increment | 
+ | user_id        | int(32)      | YES  |     | NULL    |                | 
+ | user_real_name | varchar(256) | NO   |     | NULL    |                | 
+ | user_email     | varchar(256) | NO   |     | NULL    |                | 
+ | user_phone     | varchar(64)  | YES  |     | NULL    |                | 
+ | user_fax       | varchar(64)  | YES  |     | NULL    |                | 
+ | user_url       | varchar(256) | YES  |     | NULL    |                | 
+ +----------------+--------------+------+-----+---------+----------------+
+ 
+ tbl_role
+ +----------------+-------------+------+-----+---------+----------------+
+ | Field          | Type        | Null | Key | Default | Extra          |
+ +----------------+-------------+------+-----+---------+----------------+
+ | role_id        | int(32)     | NO   | PRI | NULL    | auto_increment | 
+ | role_name      | varchar(64) | NO   |     | NULL    |                | 
+ | parent_id      | int(32)     | YES  |     | NULL    |                | 
+ | role_context   | varchar(64) | NO   |     | NULL    |                | 
+ | context_column | varchar(64) | NO   |     | NULL    |                | 
+ +----------------+-------------+------+-----+---------+----------------+
+ 
+ tbl_person_role;
+ +-----------------+---------+------+-----+---------+----------------+
+ | Field           | Type    | Null | Key | Default | Extra          |
+ +-----------------+---------+------+-----+---------+----------------+
+ | person_role_id  | int(32) | NO   | PRI | NULL    | auto_increment | 
+ | person_id       | int(32) | NO   |     | NULL    |                | 
+ | role_id         | int(32) | NO   |     | NULL    |                | 
+ | organization_id | int(32) | YES  |     | NULL    |                | 
+ | context_id      | int(32) | YES  |     | NULL    |                | 
+ +-----------------+---------+------+-----+---------+----------------+
+ 

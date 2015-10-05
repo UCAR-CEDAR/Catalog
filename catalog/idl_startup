@@ -1,0 +1,8 @@
+.r cedar_catalog_setup
+cedar_catalog_setup
+
+;test_catalog,'select * from tbl_plotting_params'
+
+query='SELECT DISTINCT concat(tbl_instrument.INST_NAME,"%",tbl_instrument.PREFIX,"%",tbl_instrument.KINST) FROM tbl_instrument,tbl_record_info,tbl_record_type WHERE tbl_instrument.KINST=tbl_record_type.KINST AND tbl_record_type.RECORD_TYPE_ID=tbl_record_info.RECORD_TYPE_ID ORDER BY tbl_instrument.KINST ASC;'
+test_catalog,query
+

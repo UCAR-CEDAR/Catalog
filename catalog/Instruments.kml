@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+  <Document>
+    <name>CEDAR Instrumentsl</name>
+    <Folder>
+      <name>Incoherent Scatter RADARs</name>
+      <description>Put here some description about ISR</description>
+      <Placemark>
+	<name>Jicamarca Peru I.S. Radar</name>
+	<description>The 50 MHz incoherent scatter radar at Jicamarca, Peru (11.95 S, 76.87 W; 520 m alt) has been operating since 1963. On day 359 of 2001 at the ground, the apex magnetic lat,lon were (0.58, -5.12) deg. The magnetic inclination and declination angles were 1.145 deg and 0.367 deg. The magnetic local time at 0 UT is ~1835 MLT.
+	  
+	  There are three basic types of operating modes for the incoherent scatter radar:
+	  
+	  1. Faraday rotation to obtain electron densities (Ne) and electron (Te) and ion temperatures (Ti)
+	  2. the drift mode
+	  3. the bistatic coherent radar mode (E-region Ne above Paracas) 
+	  
+	  In the CEDAR Data Base, there are old Faraday rotation results between 1966 and 1969, and then recent results starting in 1996, although the technique was revived in the 1980's and the Database has electron densities only for June 26-29, 1984.
+	  
+	  The drift mode, which finds perpendicular east and north (near vertical) ion drifts, has data from 1984 to the present. The analysis scheme to derive the drifts was changed starting in September of 1994 with a resulting increase in the data quality. Hard copies of time series plots of the older ion drifts are available upon request from NCAR.
+	  
+	  The bistatic coherent radar experiment involves the 50 MHz transmitter at Jicamarca and a reciever at Paracas (13.85 S, 76.25 W), which is about 200 km south of Jicamarca. E region (~95-110 km) electron density data are available using a 4 microsecond (~0.6 km) pulse length from Mar 2004. This experiment can run concurrently with either the Faraday rotation or the drift mode. 
+	
+	  For more information, please refer to http://cedarweb.hao.ucar.edu/instruments/jro.html
+	</description>
+	<Point>
+	  <coordinates>-76.87,-11.95,520</coordinates>
+	</Point>
+      </Placemark>
+      <Placemark>
+	<name>Jicamarca: Paracas Peru antenna</name>
+	<description></description>
+	<Point>
+	  <coordinates>-76.52,-11.57,10</coordinates>
+	</Point>
+      </Placemark>
+      <Placemark>
+	<name>Arecibo P.R. I.S. Radar</name>
+	<description></description>
+	<Point>
+	  <coordinates>-66.753,18.345,10</coordinates>
+	</Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Passive Optical Instruments</name>
+      <Placemark>
+	<name>Millstone Hill Fabry-Perot</name>
+	<description></description>
+	<Point>
+	  <coordinates>-71.4917,42.61949781,146</coordinates>
+	</Point>
+      </Placemark>
+      <Placemark>
+	<name>Arequipa, Peru Fabry-Perot</name>
+	<Point>
+	  <coordinates>-71.49,-16.47,2489</coordinates>
+	</Point>
+      </Placemark>
+      <Placemark>
+	<name>Peach Mountain Fabry-Perot</name>
+	<description>he Peach Mountain (also known as Stinchfield Woods) Fabry-Perot interferometer, operated by the Space Physics Research Laboratory, Department of Atmospheric, Oceanic and Space Sciences of the University of Michigan is located at latitude 42.40N and longitude 86.93W, and at an altitude of 955 ft.
+
+	  Currently, the interferometer observes the line profile of the forbidden emission OI (5577 A) and OH (8920 A). The geophysical parameters obtained from the data reduction are the gas kinetic temperature of the emitting region from the natural width of the sky profile, the line of sight wind from the Doppler shift of the sky profile, and the surface brightness of the emission line. OI (5577 A) nightglow emission is generally believed to issue from the altitude range 85 to 300 km, with the major contribution originating from a narrow height interval roughly 10 to 15 km broad centered at 97 km. Similarly, the Meinel OH emission also issues from a broad altitudinal range though centered at a lower altitude. Thus, it is difficult to assign a unique altitude to each ground based OI (5577 A) and OH (8920 A) interferometer measurement. If no other information is available, we generally ascribe 97 km as the altitude of OI (5577 A) emission and 86 km for the OH emission.
+
+	  Line of sight winds derived from the observed shift of the emission line from a zero reference position requires the determination of a zero wind. The reference zero wind is taken to be the average of an entire nights vertical wind data. Generally, the four cardinal directions are also sampled as well as the vertical. There is no exclusion of any data in the CEDAR Data Base, so cloudy night fits are also included. The cloud cover (code 440) measured by the Detroit Metro airport meteorological station is given in octas of the sky covered. Values range from 0 (clear) to 9 (overcast). In the summary plots, wind measurements were not plotted unless the cloud cover was 0-3. Temperatures and relative emission measurements were not plotted unless the cloud cover was 0-6. </description>
+	<Point>
+	  <coordinates>-86.93,42.40,289.39</coordinates>
+	</Point>
+    </Placemark>    </Folder>
+    <Folder>
+      <name>LIDARs</name>
+      <Placemark>
+	<name>Colorado State Sodium LIDAR</name>
+	<description>The Colorado State University (CSU) narrow-band sodium (Na) lidar is located at Fort Collins, Colorado at (40.59N, 105.14W), 1570 m above sea level. It was developed with CEDAR support and has been in operation since 1990. The sodium layer is located between about 70 and 120 km, with a peak near 92 km. At the end of 2001 at 92 km, the apex magnetic lat,lon coordinates were (49.61, -40.17), where the magnetic inclination and declination angles were 67.58 deg and 10.33 deg. The magnetic local time at 0 UT is 1612 MLT.
+	  
+	  The centroid wavelength of the sodium D2 transition is at 589.158 nm, which corresponds to a centroid frequency of f0=5.0886E+14 Hz. The peak of the sodium D2a transition is located at fa=-0.6514 GHz relative to the centroid frequency.
+	  
+	  The 2-frequency system is the simpler, backup system, where the cavity of the laser is tuned between fa and a second higher frequency, fc=0.1878 GHz above the centroid frequency f0. The sodium density is determined from the the signal intensity at fa, Sfa, normalized to Rayleigh scattering at a lower altitude, e.g., 30km, while the temperature can be determined from the ratio of the signal intensity, Sfc, received at fc to that at fa, Sfc/Sfa, for the 2-frequency operation.
+	  
+	  The 3-frequency system uses an acoustic optic modulator (AOM) which shifts the frequency from fa where the continuous wave (cw) laser is locked to a lower frequency fl=-1.2814 GHz, and a higher frequency fh=-0.0214 GHz, relative to f0. With 3-frequency operation, the temperature and the line of sight (los) velocity are determined collectively from two intensity ratios: the ratio 0.5(Sfh+Sfl)/Sfa, which is mainly sensitive to temperature, and a second ratio of (Sfh-Sfl)/Sfa mainly sensitive to the los velocity.
+	  
+	  The CSU lidar has two telescpes, so they can both be used and pointed in different directions to get concurrent observations of Na, temperature, and los winds that are reported in different kindats. The telescopes are often pointed 60 degrees in elevation to geographic north (azimuth=0 deg) and geographic east (azimuth=90 deg), in kindats=17011-2, where
+	  Horizontal winds = los winds/cos(60) = 2*los winds
+	  assuming zero vertical winds are stored in kindats 18011-2.
+	  
+	  Up to the end of 2000, most observations were made during the night, and most were taken with 2-frequency operation using 1200 lidar shots per min. By the end of 2000, a total of 501 nights of temperature and sodium density data were taken and analyzed. The hourly, nightly and monthly mean profiles from 51 nights in 1993 are stored in kindats 17001, 17002 and 17003.
+	  
+	  The nocturnal mean temperatures at 87+/-1.85 km for each night with 4 hours of data or longer were calculated from nightly mean photofiles directly, and from the mean of hourly averaged temperatures from 419 nights between 1990 and 1999. They were vertically smoothed by a running Hanning window with FWHM (Full Width at Half Maximum) of 3.7 km. The signal to noise ratio was better for the nightly mean photofiles obtained by averaging the photon files over the entire night before the temperatures were calculated. Therefore, this nightly mean temperature was defined to be the temperature.
+	  
+	  The nocturnal mean temperatures at 87 km are provided for colleagues who wish to compare the measured OH airglow rotational temperatures. She and Lowe (1998) suggest that under normal conditions, the centroid of the OH layer is at 87 km and that the OH temperature can then be used as proxy for temperatures at 87 km. However, this proxy should be used with care, because under unusual conditions when the OH profile is highly disturbed, sometimes with the appearance of double peaks, the OH temperature may differ from the lidar temperature at 87 km in excess of 20 K.
+	  
+	  Daytime observations are made using a Faraday filter which consists of a sodium atomic vapor cell in an imposed magnetic field between a pair of crossed polarizers. The broadband background sunlight is removed by the crossed polarizers. At the proper setting of vapor density in the Na cell and the imposed magnetic field, the received sodium light, linearly polarized after the first polarizer, has its polarization rotated by 90 deg and is retained. This technique has been used for both the 2-frequency system and the 3-frequency system to find daytime horizontal winds. Daytime lidar data in the CEDAR Database started in April 2002.
+	  
+	  At present, the width of the range gates (code 126) is 150 m for the lidar observations. The lidar fires 3000 shots per minute (50/s), evenly divided among the frequencies used. Two minute observations are the shortest periods retained by the system, and these are usually summed over 1 UT hour (code 61) and smoothed in altitude using a Hanning window [Press et al., 1986] to give a vertical Full Width at Half Maximum (FWHM, code 4021) resolution of ~2 km and ~4 km, respectively for nighttime and daytime data. FWHM = # samples in range ave * width of range gate * cos(90-elevation) / 2, or 2.01 km for 31 samples, at 60 degree elevation angle, with 150 m gates. The vertical resolution and laser shots per minute varied in the past and may vary again in the future. In some cases higher resolution data may be available from the data providers, where the UT is the 2 min ending time.
+	  
+	  For TIMED/CEDAR, the 3-frequency operation is intended, and a mean sodium density, neutral temperature, and neutral los wind are given for each telescope associated with a particular azimuth at 1.0 km intervals between 75 and 115 km at regular UT intervals (kindat 17011) and every night or day (kindat 17012), where the night or day average is computed from the interval averages weighted by the number of profiles used in each interval (code 415). Also included are measurement uncertainties calculated from the standard deviation of the photon noise present in the stated temporal and spatial resolution. The horizontal wind components (zonal or meridional) from the number of telescopes used are stored in kindats 18011 and 18012 for the UT interval and average values along with copies of the temperatures in those directions.
+	  
+	  Three days of data will be available each month starting January 2002 for TIMED/CEDAR use. Other periods are available from the data providers and are listed at /instr/csldates.html. The January through March 2002 data were revised in August 2002.
+	  
+	  The physics behind and the technology of the 2-frequency operation can be found in She et al. (1992). Those who are interested in the technique should contact the data providers. </description>
+	<Point>
+	  <coordinates>-105.14,40.59,1500</coordinates>
+	</Point>
+      </Placemark>
+      <Placemark>
+	<name>USU ALO Rayleigh LIDAR</name>
+	<description>The Utah State University (USU) Rayleigh lidar at the Atmospheric Lidar Observatory (ALO) is run by the Center for Atmospheric and Space Sciences (CASS). It is located at Logan, Utah at (41.74N, 111.81W) on the roof of the Science and Engineering Research (SER) building on campus. The height is 1466 m using the WGS84 geoid to represent the earth. The lidar is operated in the vertical direction and can obtain data on all non-heavy cloud nights. (Thin cirrus clouds are OK.) An operator is present to operate the system and for aircraft safety. The lidar started operations in August 1993, with relatively regular operations up to the present except between April 1997 and May 1998 when the lidar was not operating.
+	  
+	  The lidar operates at a wavelength of 532 nm up to about 500 km, but collects meaningful data only between about 45 and 100 km. The height resolution of the data is originally 37.5 m using 3600 shots (30 per sec) over 2 minutes. However, averaging is done over 81 range gates (81*37.5m = 3.0375 km) with a sliding average reported every 112.5 m (3 range gates). The number of 2-min integrations is reported as Code 415. Hourly averages of 29 or less 2 minute intervals are calculated, where cloudy or otherwise unusable periods have been eliminated in the hourly average (kindat=17002). Nightly average profiles are also computed (kindat=17001).
+	  
+	  The data is affected by several factors. We assume Rayleigh scattering off molecules, but if volcanic aerosols are present in the lower part, or noctilucent clouds with ice crystals are present in the upper altitudes, then the scattering is Mie scattering and the Rayleigh assumption breaks down. Mie scattering in the data will tend to lower the derived temperatures. Other factors are saturation of the photomultiplier tube by signal at 40 km, so the normalization altitude is chosen between 45-50 km, and the temperature data is good down to at least 45 km. Saturation effects raise the derived temperature. Finally the background count is measured between about 120 and 150 km, and is subtracted from the measurements below. The photocounts are integrated downwards starting at the height at which the signal is 16 times the standard deviation. Uncertainties in the background removal can affect temperatures above 80 km, but should be negligible below 75 km.
+	</description>
+	<Point>
+	  <coordinates>-111.81,41.74,1466</coordinates>
+	</Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Digisondes</name>
+      <Placemark>
+	<name>Qaanaaq Greenland Digisonde</name>
+	<description>The Digisonde (DGS-256) located at Qaanaaq, Greenland (77.5N, 290.6E) and operated by the University of Massachusettes Lowell Center for Atmospheric Research, for Phillips Laboratory Hanscom AFB, has produced ion velocity measurements and electron density profiles since 1983. The data are originally collected in local magnetic coordinates, and then converted to geographic coordinates using the declination angle of -71.0 for an altitude of 0 km.
+	  
+	  The Digisonde generally operates in a 15 minute cycle mode, where the first 2-3 minutes an ionogram is recorded followed generally by 1-2 minutes of drift measurements, with the remaining 10-12 minutes idle. Sometimes the cycle time is 5 minutes. The range of altitudes is about 200-450 km, where the mean is about 300 km.
+	  
+	  Digisondes transmit HF radio waves illuminating a large ionospheric area of several hundred kilomaters diameter over the sounder. Radio waves are sent up and reflected off orthogonal surfaces. Each reflection point is considered to be a separate source and has associated with it a line- of-sight (los) Doppler velocity measurement. Making the assumption that the main contribution to the measured Doppler shifts results from the uniform horizontal bulk motion of the plasma, the los velocity and source location are used to calculate the velocity vector by least squares fit.
+	  
+	  The drift mode operated at Qaanaaq during 1989 resulted in up to a maximum of 64 sources in a single integration period of 5 seconds. One minute data is obtained where the error bar is the average of the standard deviations from 12 5-second integrations, while the value of each velocity component is the median from a further velocity distribution found using all the data points in the entire one minute period. The 1 minute results were taken and reported every 15 minutes.
+	  
+	  Summary plots of the ion drifts towards geographic East, North and up are plotted for 20 days at a time. Error bars are shown as dotted lines. There are very few data gaps for this period of 1989 submitted by James Scali , james_scali@uml.edu. </description>
+	<Point>
+	  <coordinates>-69.4,77.5</coordinates>
+	</Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Middle Atmosphere Radars</name>
+      <description>Say here something about this type of Radars</description>
+      <Placemark>
+	<name>Poker Flat MST Radar</name>
+	<description>The Poker Flat MST radar was located at the Poker Flat Rocket range about 200 m above mean sea level in Alaska at (65.13N, 145.46W), and operated between 1979 and 1987. The last 2 years are not in the CEDAR Data Base. The inclination angle is about 77 degrees, and the declination is about 29 degrees to the east of north.
+	  
+	  The Poker Flat radar was a high power radar, with three narrow beams. One beam looked vertically (kindat=20003) and the other two were inclined at 15 degrees to vertical, or at an elevation angle of 75 degrees. The 'east' beam had an azimuth 26 degrees north of east (kindat=20001) while the 'north' beam had an azimuth 26 degrees west of north (kindat=20002). Most of the data were taken using all three beams but some, especially in the early days, were taken with only the vertical beam or with only the oblique beams. During an experiment one or more beams were sometimes inactivated. The cycle time for a complete set of vertical and oblique records seldom exceeded 10 min and was typically 1 min. When available, velocity measurements from the two oblique beams were combined to give eastward and northward components of the neutral wind (kindat=20004). The velocity spread is twice the square root of the second moment of the power spectrum and is a measure of shear or turbulence in the measurement volume.
+	  
+	  Data quality below 5 km is definitely dubious and below 8 km should be treated with suspicion due to recovery problems. The more obviously false data have been removed from this data set but consistently false data are hard to distinguish from the real thing and may be included.
+	  
+	  The original Poker Flat data set has been subjected to an extensive set of checks to remove various interference modes, outliers and otherwise non-atmoshperic data. The parameters for the remaining data have been averaged for all appropriate records that commenced within a one hour interval. Note that these are averages of the derived parameters and not parameters derived from an average velocity spectrum.
+	  
+	  In the absence of any signal echo the main contribution to noise is the radio noise from our galaxy. Hence there is a siderial variation (of about 4 db) in the noise level. Atmospheric absorption events reduce the level of noise. Receiver gain and cable attenuation fluctuations may have a small influence. Operator modification of gain controls are rare. Strong signals can corrupt the computation through their sidelobes. The errors given are the root mean square values of the deviation from the mean for that hour.
+	  
+	  There are 4 areas in the summary plots for neutral velocities for four 2-day periods between 0 and 80 km. When both eastward and northward velocities are available, there are vector plots for every 3 km where eastward is to the right and northward is upward. When horizontal vectors are unavailable, the vertical neutral velocity is plotted as line plots every 5 km. When only 1 oblique beam is available (only the 'east' beam), an image plot of the line-of-sight (l-o-s) velocity is made for 3 km bins.
+
+For more information, please http://cedarweb.hao.ucar.edu/instruments/pkr.html
+</description>
+	<Point>
+	  <coordinates>-145.46,65.13,200</coordinates>
+	</Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
+

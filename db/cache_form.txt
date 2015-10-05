@@ -1,0 +1,7 @@
+where is the data
+user name
+password
+hostname
+port
+database name
+full path to the mysql client
